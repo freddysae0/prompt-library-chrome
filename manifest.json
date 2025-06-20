@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Prompt Highlighter",
+    "version": "1.0",
+    "description": "Resalta campos de texto que parezcan ser usados para prompts.",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ],
+    "permissions": []
+}
