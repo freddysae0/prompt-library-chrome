@@ -9,10 +9,10 @@
                 "<all_urls>"
             ],
             "js": [
-                "content.js"
+                {"file": "src/content/main.js", "type": "module"}
             ],
             "css": [
-                "style.css"
+                "src/styles/prompts.css"
             ]
         }
     ],
