@@ -1,4 +1,4 @@
-function isPromptLikeEditableDiv(el) {
+export function isPromptLikeEditableDiv(el) {
     const contentEditable = el.getAttribute("contenteditable") === "true";
     const roleTextbox = el.getAttribute("role") === "textbox";
     const ariaLabel = el.getAttribute("aria-label")?.toLowerCase() || "";
@@ -16,16 +16,3 @@ function isPromptLikeEditableDiv(el) {
             roleTextbox)
     );
 }
-
-function highlightAllPromptFields() {
-    const fields = document.querySelectorAll('div[contenteditable="true"]');
-    fields.forEach(el => {
-        if (isPromptLikeEditableDiv(el)) {
-            el.style.backgroundColor = "#fff5cc";
-            el.style.border = "2px solid orange";
-        }
-    });
-}
-// Run on load and periodically (in case of dynamic SPAs like ChatGPT)
-
-setInterval(highlightAllPromptFields, 2000);
